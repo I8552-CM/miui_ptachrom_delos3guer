@@ -541,7 +541,6 @@
 
     or-int/2addr v3, v5
 
-    .line 219
     goto :goto_0
 
     .line 220
@@ -919,7 +918,6 @@
     .line 482
     add-int/lit8 v0, v0, 0x1
 
-    .line 483
     goto :goto_2
 
     .line 484

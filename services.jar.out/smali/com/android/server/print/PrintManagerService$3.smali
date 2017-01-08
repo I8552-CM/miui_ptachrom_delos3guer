@@ -383,7 +383,7 @@
 
     move-result-object v7
 
-    invoke-interface {v7}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    invoke-virtual {v7}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v5
 

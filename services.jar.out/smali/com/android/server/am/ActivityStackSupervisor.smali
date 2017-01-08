@@ -8251,30 +8251,15 @@
     .local v23, "aInfo":Landroid/content/pm/ActivityInfo;
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/android/server/am/ActivityStackSupervisor;->mContext:Landroid/content/Context;
+    iget-object v2, v0, Lcom/android/server/am/ActivityStackSupervisor;->mContext:Landroid/content/Context;
 
-    const/4 v7, 0x0
+    move-object/from16 v4, v23
 
-    if-eqz p6, :cond_miui_2
-
-    const/4 v7, 0x1
-
-    :cond_miui_2
-    move-object/from16 v5, v23
-
-    move-object v6, v3
-
-    move/from16 v8, p8
-
-    move/from16 v9, p15
-
-    invoke-static/range {v4 .. v9}, Lcom/android/server/am/ExtraActivityManagerService;->checkAccessControl(Landroid/content/Context;Landroid/content/pm/ActivityInfo;Landroid/content/Intent;ZII)Landroid/content/Intent;
+    invoke-static {v2, v4, v3}, Lcom/android/server/am/ExtraActivityManagerService;->checkAccessControl(Landroid/content/Context;Landroid/content/pm/ActivityInfo;Landroid/content/Intent;)Landroid/content/Intent;
 
     move-result-object v3
 
     move-object/from16 p4, v3
-
-    move-object/from16 v4, v23
 
     move-object/from16 v5, p4
 
@@ -8290,21 +8275,24 @@
 
     move-result-object v23
 
-    move-object/from16 v8, v23
+    move-object/from16 v4, v23
 
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lcom/android/server/am/ActivityStackSupervisor;->mContext:Landroid/content/Context;
 
+    if-eqz v4, :cond_miui_0
+
+    iget-object v2, v4, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+
+    :goto_miui_0
+    move-object/from16 v0, p0
+
     iget-object v6, v0, Lcom/android/server/am/ActivityStackSupervisor;->mService:Lcom/android/server/am/ActivityManagerService;
 
-    iget-boolean v10, v6, Lcom/android/server/am/ActivityManagerService;->mSystemReady:Z
+    iget-boolean v6, v6, Lcom/android/server/am/ActivityManagerService;->mSystemReady:Z
 
-    move-object/from16 v9, p4
-
-    move-object/from16 v7, p1
-
-    invoke-static/range {v5 .. v10}, Lcom/android/server/am/ExtraActivityManagerService;->checkRunningCompatibility(Landroid/content/Context;Lcom/android/server/am/ActivityManagerService;Landroid/app/IApplicationThread;Landroid/content/pm/ActivityInfo;Landroid/content/Intent;Z)Z
+    invoke-static {v5, v2, v6}, Lcom/android/server/am/ExtraActivityManagerService;->checkRunningCompatibility(Landroid/content/Context;Landroid/content/pm/ApplicationInfo;Z)Z
 
     move-result v2
 
@@ -8313,6 +8301,11 @@
     const/16 v32, 0x5
 
     return v32
+
+    :cond_miui_0
+    const/4 v2, 0x0
+
+    goto :goto_miui_0
 
     :cond_miui_1
     move-object/from16 v0, p0

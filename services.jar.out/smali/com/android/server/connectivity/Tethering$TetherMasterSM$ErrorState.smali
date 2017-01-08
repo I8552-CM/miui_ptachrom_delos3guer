@@ -67,7 +67,9 @@
 
     move-result-object v1
 
-    .local v1, "o":Ljava/lang/Object;
+    check-cast v1, Lcom/android/server/connectivity/Tethering$TetherInterfaceSM;
+
+    .local v1, "o":Lcom/android/server/connectivity/Tethering$TetherInterfaceSM;
     move-object v2, v1
 
     .line 1814
@@ -80,7 +82,7 @@
     goto :goto_0
 
     .line 1817
-    .end local v1    # "o":Ljava/lang/Object;
+    .end local v1    # "o":Lcom/android/server/connectivity/Tethering$TetherInterfaceSM;
     .end local v2    # "sm":Lcom/android/server/connectivity/Tethering$TetherInterfaceSM;
     :cond_0
     return-void

@@ -679,7 +679,6 @@
     .line 622
     add-int/lit8 v2, v2, 0x1
 
-    .line 623
     goto :goto_1
 
     .line 615

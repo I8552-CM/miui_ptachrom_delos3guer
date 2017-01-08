@@ -2097,7 +2097,7 @@
 
     iget-object v1, p1, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->mEnabledServices:Ljava/util/Set;
 
-    invoke-interface {v0, v1}, Ljava/util/Set;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -2371,7 +2371,7 @@
 
     iget-object v9, p1, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->mInstalledServices:Ljava/util/List;
 
-    invoke-interface {v8, v9}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v8, v9}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v8
 
@@ -2494,7 +2494,7 @@
 
     iget-object v1, p1, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->mTouchExplorationGrantedServices:Ljava/util/Set;
 
-    invoke-interface {v0, v1}, Ljava/util/Set;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -2896,7 +2896,7 @@
 
     move-result-object v2
 
-    invoke-interface {v2}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0
 

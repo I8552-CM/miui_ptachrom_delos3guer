@@ -1019,7 +1019,7 @@
     .line 674
     iget-object v1, p0, Lcom/android/server/print/UserState;->mEnabledServices:Ljava/util/Set;
 
-    invoke-interface {v0, v1}, Ljava/util/Set;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 

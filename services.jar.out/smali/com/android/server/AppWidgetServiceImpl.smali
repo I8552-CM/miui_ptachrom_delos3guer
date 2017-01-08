@@ -1907,7 +1907,7 @@
 
     move-result-object v14
 
-    invoke-interface {v14}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    invoke-virtual {v14}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v14
 
@@ -4944,46 +4944,46 @@
     .locals 6
 
     .prologue
+    .line 1617
     invoke-virtual {p0}, Lcom/android/server/AppWidgetServiceImpl;->savedStateFile()Landroid/util/AtomicFile;
 
     move-result-object v1
 
+    .line 1619
     .local v1, "file":Landroid/util/AtomicFile;
     :try_start_0
     invoke-virtual {v1}, Landroid/util/AtomicFile;->openRead()Ljava/io/FileInputStream;
 
     move-result-object v2
 
+    .line 1620
     .local v2, "stream":Ljava/io/FileInputStream;
     invoke-virtual {p0, v2}, Lcom/android/server/AppWidgetServiceImpl;->readStateFromFileLocked(Ljava/io/FileInputStream;)V
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
 
+    .line 1622
     if-eqz v2, :cond_0
 
+    .line 1624
     :try_start_1
     invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
 
+    .line 1632
     .end local v2    # "stream":Ljava/io/FileInputStream;
     :cond_0
     :goto_0
-    iget-object v3, p0, Lcom/android/server/AppWidgetServiceImpl;->mContext:Landroid/content/Context;
-
-    iget-object v4, p0, Lcom/android/server/AppWidgetServiceImpl;->mInstalledProviders:Ljava/util/ArrayList;
-
-    iget v5, p0, Lcom/android/server/AppWidgetServiceImpl;->mUserId:I
-
-    invoke-static {v3, v4, v5}, Lcom/android/server/AppWidgetServiceImplInjector;->updateWidgetPackagesLocked(Landroid/content/Context;Ljava/util/List;I)V
-
     return-void
 
+    .line 1625
     .restart local v2    # "stream":Ljava/io/FileInputStream;
     :catch_0
     move-exception v0
 
+    .line 1626
     .local v0, "e":Ljava/io/IOException;
     :try_start_2
     const-string v3, "AppWidgetServiceImpl"
@@ -8167,34 +8167,29 @@
     .locals 6
 
     .prologue
+    .line 1635
     iget-boolean v3, p0, Lcom/android/server/AppWidgetServiceImpl;->mHasFeature:Z
 
     if-nez v3, :cond_0
 
-    return-void
-
+    .line 1651
     :goto_0
-    iget-object v3, p0, Lcom/android/server/AppWidgetServiceImpl;->mContext:Landroid/content/Context;
-
-    iget-object v4, p0, Lcom/android/server/AppWidgetServiceImpl;->mInstalledProviders:Ljava/util/ArrayList;
-
-    iget v5, p0, Lcom/android/server/AppWidgetServiceImpl;->mUserId:I
-
-    invoke-static {v3, v4, v5}, Lcom/android/server/AppWidgetServiceImplInjector;->updateWidgetPackagesLocked(Landroid/content/Context;Ljava/util/List;I)V
-
     return-void
 
+    .line 1638
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/AppWidgetServiceImpl;->savedStateFile()Landroid/util/AtomicFile;
 
     move-result-object v1
 
+    .line 1641
     .local v1, "file":Landroid/util/AtomicFile;
     :try_start_0
     invoke-virtual {v1}, Landroid/util/AtomicFile;->startWrite()Ljava/io/FileOutputStream;
 
     move-result-object v2
 
+    .line 1642
     .local v2, "stream":Ljava/io/FileOutputStream;
     invoke-virtual {p0, v2}, Lcom/android/server/AppWidgetServiceImpl;->writeStateToFileLocked(Ljava/io/FileOutputStream;)Z
 

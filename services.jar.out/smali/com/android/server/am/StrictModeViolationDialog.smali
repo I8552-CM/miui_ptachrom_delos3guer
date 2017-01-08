@@ -90,7 +90,7 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v4
 
@@ -226,7 +226,7 @@
 
     new-array v3, v6, [Ljava/lang/Object;
 
-    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v4
 

@@ -319,7 +319,9 @@
 
     move-result-object v6
 
-    .local v6, "o":Ljava/lang/Object;
+    check-cast v6, Lcom/android/server/connectivity/Tethering$TetherInterfaceSM;
+
+    .local v6, "o":Lcom/android/server/connectivity/Tethering$TetherInterfaceSM;
     const-string v10, "Tethering"
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -346,7 +348,7 @@
 
     .line 1752
     .end local v3    # "i$":Ljava/util/Iterator;
-    .end local v6    # "o":Ljava/lang/Object;
+    .end local v6    # "o":Lcom/android/server/connectivity/Tethering$TetherInterfaceSM;
     :cond_2
     const-string v10, "Tethering"
 

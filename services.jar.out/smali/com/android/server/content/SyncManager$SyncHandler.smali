@@ -775,7 +775,7 @@
     .line 2801
     const-string v2, "provider"
 
-    invoke-interface {v8}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    invoke-virtual {v8}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v3
 
@@ -895,7 +895,7 @@
 
     move-result-object v3
 
-    invoke-interface {v12}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    invoke-virtual {v12}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v5
 

@@ -31,6 +31,8 @@
 
 .field private mFirewallCode:I
 
+.field private mFirewallCode:I
+
 .field mUserData:Ljava/lang/Object;
 
 
@@ -43,6 +45,10 @@
     const-string v0, "Connection"
 
     sput-object v0, Lcom/android/internal/telephony/Connection;->LOG_TAG:Ljava/lang/String;
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/android/internal/telephony/Connection;->mFirewallCode:I
 
     return-void
 .end method
@@ -172,6 +178,15 @@
     return v0
 .end method
 
+.method public getFirewallCode()I
+    .locals 1
+
+    .prologue
+    iget v0, p0, Lcom/android/internal/telephony/Connection;->mFirewallCode:I
+
+    return v0
+.end method
+
 .method public abstract getHoldDurationMillis()J
 .end method
 
@@ -211,6 +226,39 @@
 .end method
 
 .method public abstract getRemainingPostDialString()Ljava/lang/String;
+.end method
+
+.method public getRingDurationMillis()J
+    .locals 6
+
+    .prologue
+    invoke-virtual {p0}, Lcom/android/internal/telephony/Connection;->getCreateTime()J
+
+    move-result-wide v2
+
+    .local v2, "createTime":J
+    invoke-virtual {p0}, Lcom/android/internal/telephony/Connection;->getConnectTime()J
+
+    move-result-wide v0
+
+    .local v0, "connectionTime":J
+    cmp-long v4, v0, v2
+
+    if-lez v4, :cond_0
+
+    sub-long v4, v0, v2
+
+    :goto_0
+    return-wide v4
+
+    :cond_0
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v4
+
+    sub-long/2addr v4, v2
+
+    goto :goto_0
 .end method
 
 .method public getRingDurationMillis()J
@@ -320,6 +368,15 @@
     return v0
 .end method
 
+.method public isForwarded()Z
+    .locals 1
+
+    .prologue
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
 .method public abstract isIncoming()Z
 .end method
 
@@ -416,6 +473,16 @@
     iput-object p1, p0, Lcom/android/internal/telephony/Connection;->callModifyRequest:Lcom/android/internal/telephony/CallModify;
 
     .line 152
+    return-void
+.end method
+
+.method public setFirewallCode(I)V
+    .locals 0
+    .param p1, "firewallCode"    # I
+
+    .prologue
+    iput p1, p0, Lcom/android/internal/telephony/Connection;->mFirewallCode:I
+
     return-void
 .end method
 

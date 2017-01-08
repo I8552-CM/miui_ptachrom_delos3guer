@@ -1689,7 +1689,6 @@
     .line 757
     add-int/lit8 v16, v16, 0x1
 
-    .line 758
     goto/16 :goto_1
 
     .line 764

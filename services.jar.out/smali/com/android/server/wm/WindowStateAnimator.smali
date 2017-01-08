@@ -3056,7 +3056,7 @@
 
     move-result-object v2
 
-    invoke-interface {v2}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v2
 

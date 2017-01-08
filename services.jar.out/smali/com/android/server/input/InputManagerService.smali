@@ -2846,7 +2846,7 @@
     .local v15, "receiverLabel":Ljava/lang/CharSequence;
     if-eqz v15, :cond_2
 
-    invoke-interface {v15}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    invoke-virtual {v15}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v6
 

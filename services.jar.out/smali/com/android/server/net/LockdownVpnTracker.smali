@@ -578,7 +578,7 @@
 
     iget-object v12, p0, Lcom/android/server/net/LockdownVpnTracker;->mAcceptedSourceAddr:Ljava/util/List;
 
-    invoke-interface {v9, v12}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v9, v12}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v12
 

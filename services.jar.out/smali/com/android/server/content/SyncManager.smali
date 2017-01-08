@@ -7343,7 +7343,6 @@
     .line 771
     add-int/lit8 v0, v0, 0x1
 
-    .line 772
     goto :goto_0
 
     .line 773
@@ -9079,14 +9078,4 @@
     move-result v0
 
     return v0
-.end method
-
-.method static synthetic access_getContext(Lcom/android/server/content/SyncManager;)Landroid/content/Context;
-    .locals 1
-    .param p0, "x0"    # Lcom/android/server/content/SyncManager;
-
-    .prologue
-    iget-object v0, p0, Lcom/android/server/content/SyncManager;->mContext:Landroid/content/Context;
-
-    return-object v0
 .end method

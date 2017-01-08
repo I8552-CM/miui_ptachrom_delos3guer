@@ -535,7 +535,7 @@
 
     .line 294
     .local v1, "value":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/Long;>;"
-    invoke-interface {v1, p1}, Ljava/util/Set;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 

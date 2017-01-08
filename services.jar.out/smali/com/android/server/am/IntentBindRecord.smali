@@ -129,7 +129,6 @@
 
     or-int/2addr v2, v5
 
-    .line 87
     goto :goto_1
 
     .line 82

@@ -22,7 +22,6 @@
 # instance fields
 .field mContentResolver:Landroid/content/ContentResolver;
 
-.field private mSystemServiceManager:Lcom/android/server/SystemServiceManager;
 
 # direct methods
 .method constructor <init>()V
@@ -75,16 +74,6 @@
     const/4 v3, 0x1
 
     goto :goto_0
-.end method
-
-.method static synthetic access$mSystemServiceManager(Lcom/android/server/ServerThread;)Lcom/android/server/SystemServiceManager;
-    .locals 1
-    .param p0, "x0"    # Lcom/android/server/ServerThread;
-
-    .prologue
-    iget-object v0, p0, Lcom/android/server/ServerThread;->mSystemServiceManager:Lcom/android/server/SystemServiceManager;
-
-    return-object v0
 .end method
 
 .method static final startSystemUi(Landroid/content/Context;)V
@@ -598,22 +587,6 @@
     .line 245
     .local v93, "disableNetwork":Z
     :try_start_3
-    new-instance v7, Lcom/android/server/SystemServiceManager;
-
-    invoke-direct {v7, v5}, Lcom/android/server/SystemServiceManager;-><init>(Landroid/content/Context;)V
-
-    move-object/from16 v0, p0
-
-    iput-object v7, v0, Lcom/android/server/ServerThread;->mSystemServiceManager:Lcom/android/server/SystemServiceManager;
-
-    const-class v7, Lcom/android/server/SystemServiceManager;
-
-    move-object/from16 v0, p0
-
-    iget-object v9, v0, Lcom/android/server/ServerThread;->mSystemServiceManager:Lcom/android/server/SystemServiceManager;
-
-    invoke-static {v7, v9}, Lcom/android/server/LocalServices;->addService(Ljava/lang/Class;Ljava/lang/Object;)V
-
     const-string v7, "SystemServer"
 
     const-string v9, "Display Manager"
@@ -935,9 +908,9 @@
     invoke-static {v7, v9}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 317
-    new-instance v6, Lcom/android/server/LightsService;
+    new-instance v6, Lcom/android/server/MiuiLightsService;
 
-    invoke-direct {v6, v5}, Lcom/android/server/LightsService;-><init>(Landroid/content/Context;)V
+    invoke-direct {v6, v5}, Lcom/android/server/MiuiLightsService;-><init>(Landroid/content/Context;)V
     :try_end_c
     .catch Ljava/lang/RuntimeException; {:try_start_c .. :try_end_c} :catch_2
 
@@ -1106,13 +1079,13 @@
     invoke-static {v7, v9}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 347
-    new-instance v20, Lcom/android/server/input/InputManagerService;
+    new-instance v20, Lcom/android/server/input/MiuiInputManagerService;
 
     move-object/from16 v0, v20
 
     move-object/from16 v1, v21
 
-    invoke-direct {v0, v5, v1}, Lcom/android/server/input/InputManagerService;-><init>(Landroid/content/Context;Landroid/os/Handler;)V
+    invoke-direct {v0, v5, v1}, Lcom/android/server/input/MiuiInputManagerService;-><init>(Landroid/content/Context;Landroid/os/Handler;)V
     :try_end_11
     .catch Ljava/lang/RuntimeException; {:try_start_11 .. :try_end_11} :catch_6a
 

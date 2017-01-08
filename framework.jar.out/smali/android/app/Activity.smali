@@ -5745,12 +5745,12 @@
     .locals 1
 
     .prologue
-    .line 1072
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/app/Activity;->mCalled:Z
 
-    .line 1073
+    invoke-static {p0}, Landroid/app/ActivityInjector;->checkAccessControl(Landroid/app/Activity;)V
+
     return-void
 .end method
 

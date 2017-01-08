@@ -590,7 +590,7 @@
 
     move-result-object v10
 
-    invoke-interface {v10}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    invoke-virtual {v10}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v7
 

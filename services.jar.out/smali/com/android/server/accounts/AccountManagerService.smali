@@ -1887,7 +1887,7 @@
 
     move-result-object v4
 
-    invoke-interface {v4}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v14
 
@@ -7346,7 +7346,6 @@
     .line 418
     add-int/lit8 v21, v21, 0x1
 
-    .line 419
     goto :goto_4
 
     .line 420
@@ -9435,7 +9434,6 @@
 
     add-int/2addr v3, v4
 
-    .line 2990
     goto :goto_1
 
     .line 2991
@@ -9496,7 +9494,6 @@
 
     add-int/2addr v3, v4
 
-    .line 3000
     goto :goto_2
 
     .line 3001
@@ -10294,7 +10291,6 @@
     .line 566
     add-int/lit8 v2, v2, 0x1
 
-    .line 567
     goto :goto_0
 
     .line 570
@@ -11249,11 +11245,15 @@
 
 .method public bridge synthetic onServiceChanged(Ljava/lang/Object;IZ)V
     .locals 0
+    .param p1, "x0"    # Ljava/lang/Object;
+    .param p2, "x1"    # I
+    .param p3, "x2"    # Z
 
     .prologue
     .line 104
     check-cast p1, Landroid/accounts/AuthenticatorDescription;
 
+    .end local p1    # "x0":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/accounts/AccountManagerService;->onServiceChanged(Landroid/accounts/AuthenticatorDescription;IZ)V
 
     return-void

@@ -2298,6 +2298,22 @@
 
     .line 4678
     :cond_1e
+    const/16 v35, 0xc8
+ 
+    move/from16 v0, v28
+ 
+    move/from16 v1, v35
+ 
+    if-lt v0, v1, :cond_miui_0
+ 
+    const/16 v35, 0x18f
+ 
+    move/from16 v0, v28
+ 
+    move/from16 v1, v35
+ 
+    if-gt v0, v1, :cond_miui_0
+
     :try_start_18
     new-instance v35, Ljava/lang/StringBuilder;
 
@@ -2885,11 +2901,13 @@
 
 .method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
+    .param p1, "x0"    # [Ljava/lang/Object;
 
     .prologue
     .line 4333
     check-cast p1, [Lcom/android/server/ConnectivityService$CheckMp$Params;
 
+    .end local p1    # "x0":[Ljava/lang/Object;
     invoke-virtual {p0, p1}, Lcom/android/server/ConnectivityService$CheckMp;->doInBackground([Lcom/android/server/ConnectivityService$CheckMp$Params;)Ljava/lang/Integer;
 
     move-result-object v0
@@ -3007,11 +3025,13 @@
 
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
+    .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
     .line 4333
     check-cast p1, Ljava/lang/Integer;
 
+    .end local p1    # "x0":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Lcom/android/server/ConnectivityService$CheckMp;->onPostExecute(Ljava/lang/Integer;)V
 
     return-void

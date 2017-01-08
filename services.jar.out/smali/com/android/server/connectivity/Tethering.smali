@@ -2428,8 +2428,10 @@
 
     move-result-object v2
 
+    check-cast v2, Lcom/android/server/connectivity/Tethering$TetherInterfaceSM;
+
     .line 1891
-    .local v2, "o":Ljava/lang/Object;
+    .local v2, "o":Lcom/android/server/connectivity/Tethering$TetherInterfaceSM;
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -2453,7 +2455,7 @@
     goto :goto_2
 
     .line 1893
-    .end local v2    # "o":Ljava/lang/Object;
+    .end local v2    # "o":Lcom/android/server/connectivity/Tethering$TetherInterfaceSM;
     :cond_2
     monitor-exit v4
     :try_end_1

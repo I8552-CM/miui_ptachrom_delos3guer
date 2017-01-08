@@ -117,7 +117,7 @@
 
     move-result v1
 
-    .line 67
+    .line 68
     .local v1, "eventType":I
     :goto_0
     if-eq v1, v12, :cond_0

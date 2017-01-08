@@ -202,6 +202,8 @@
 
 .field private mButtonLightEnabled:Z
 
+.field private mButtonLightEnabled:Z
+
 .field mCanHideNavigationBar:Z
 
 .field mCarDockEnablesAccelerometer:Z
@@ -826,6 +828,12 @@
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mLock:Ljava/lang/Object;
+
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mQuickBootLock:Ljava/lang/Object;
 
     new-instance v0, Ljava/lang/Object;
 
@@ -5084,6 +5092,12 @@
 
     or-int p3, p3, v18
 
+    invoke-virtual/range {p0 .. p1}, Lcom/android/internal/policy/impl/PhoneWindowManager;->getExtraSystemUiVisibility(Landroid/view/WindowManagerPolicy$WindowState;)I
+
+    move-result v18
+
+    or-int p3, p3, v18
+
     .line 6264
     return p3
 
@@ -8712,6 +8726,16 @@
     return-void
 .end method
 
+.method callInterceptPowerKeyUp(Z)V
+    .locals 0
+    .param p1, "canceled"    # Z
+
+    .prologue
+    invoke-direct {p0, p1}, Lcom/android/internal/policy/impl/PhoneWindowManager;->interceptPowerKeyUp(Z)Z
+
+    return-void
+.end method
+
 .method public canBeForceHidden(Landroid/view/WindowManagerPolicy$WindowState;Landroid/view/WindowManager$LayoutParams;)Z
     .locals 1
     .param p1, "win"    # Landroid/view/WindowManagerPolicy$WindowState;
@@ -11575,6 +11599,16 @@
     return v0
 .end method
 
+.method getExtraSystemUiVisibility(Landroid/view/WindowManagerPolicy$WindowState;)I
+    .locals 1
+    .param p1, "win"    # Landroid/view/WindowManagerPolicy$WindowState;
+
+    .prologue
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
 .method public getMaxWallpaperLayer()I
     .locals 1
 
@@ -11656,6 +11690,24 @@
     .end local p1    # "fullWidth":I
     :cond_0
     return p1
+.end method
+
+.method getPowerLongPress()Ljava/lang/Runnable;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mPowerLongPress:Ljava/lang/Runnable;
+
+    return-object v0
+.end method
+
+.method getScreenshotChordLongPress()Ljava/lang/Runnable;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mScreenshotRunnable:Ljava/lang/Runnable;
+
+    return-object v0
 .end method
 
 .method getPowerLongPress()Ljava/lang/Runnable;
@@ -20680,6 +20732,15 @@
     return-void
 .end method
 
+.method public notifyBackLidSwitchChanged(JZ)V
+    .locals 0
+    .param p1, "whenNanos"    # J
+    .param p3, "lidOpen"    # Z
+
+    .prologue
+    return-void
+.end method
+
 .method public notifyLidSwitchChanged(JZ)V
     .locals 6
     .param p1, "whenNanos"    # J
@@ -23275,6 +23336,16 @@
     iput-object p2, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mLastInputMethodTargetWindow:Landroid/view/WindowManagerPolicy$WindowState;
 
     .line 6313
+    return-void
+.end method
+
+.method setPowerLongPress(Ljava/lang/Runnable;)V
+    .locals 0
+    .param p1, "value"    # Ljava/lang/Runnable;
+
+    .prologue
+    iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mPowerLongPress:Ljava/lang/Runnable;
+
     return-void
 .end method
 

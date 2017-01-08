@@ -69,5 +69,4 @@ local-pre-zip-misc:
 
 	rm -rf $(ZIP_DIR)/system/priv-app/ThemeChooser.apk
 
-	rm -rf $(ZIP_DIR)/system/priv-app/ThemesProvider.apk[/CODE]
-
+	rm -rf $(ZIP_DIR)/system/priv-app/ThemesProvider.apk

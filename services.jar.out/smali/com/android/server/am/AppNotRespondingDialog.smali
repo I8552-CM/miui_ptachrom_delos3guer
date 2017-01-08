@@ -115,13 +115,13 @@
 
     new-array v5, v9, [Ljava/lang/Object;
 
-    invoke-interface {v1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v6
 
     aput-object v6, v5, v7
 
-    invoke-interface {v2}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v6
 
@@ -319,7 +319,7 @@
     :cond_6
     new-array v5, v8, [Ljava/lang/Object;
 
-    invoke-interface {v1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v6
 

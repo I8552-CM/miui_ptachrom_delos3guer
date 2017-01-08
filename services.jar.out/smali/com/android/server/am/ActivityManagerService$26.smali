@@ -30,7 +30,7 @@
     .locals 0
 
     .prologue
-    .line 16616
+    .line 16604
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$26;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iput-object p2, p0, Lcom/android/server/am/ActivityManagerService$26;->val$callback:Landroid/app/IStopUserCallback;
@@ -48,7 +48,7 @@
     .locals 2
 
     .prologue
-    .line 16620
+    .line 16608
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$26;->val$callback:Landroid/app/IStopUserCallback;
 
@@ -58,11 +58,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 16623
+    .line 16611
     :goto_0
     return-void
 
-    .line 16621
+    .line 16609
     :catch_0
     move-exception v0
 

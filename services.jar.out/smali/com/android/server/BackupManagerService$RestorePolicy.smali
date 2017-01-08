@@ -54,7 +54,7 @@
 
     const/4 v3, 0x0
 
-    .line 3284
+    .line 3283
     new-instance v0, Lcom/android/server/BackupManagerService$RestorePolicy;
 
     const-string v1, "IGNORE"
@@ -63,7 +63,7 @@
 
     sput-object v0, Lcom/android/server/BackupManagerService$RestorePolicy;->IGNORE:Lcom/android/server/BackupManagerService$RestorePolicy;
 
-    .line 3285
+    .line 3284
     new-instance v0, Lcom/android/server/BackupManagerService$RestorePolicy;
 
     const-string v1, "ACCEPT"
@@ -72,7 +72,7 @@
 
     sput-object v0, Lcom/android/server/BackupManagerService$RestorePolicy;->ACCEPT:Lcom/android/server/BackupManagerService$RestorePolicy;
 
-    .line 3286
+    .line 3285
     new-instance v0, Lcom/android/server/BackupManagerService$RestorePolicy;
 
     const-string v1, "ACCEPT_IF_APK"
@@ -81,7 +81,7 @@
 
     sput-object v0, Lcom/android/server/BackupManagerService$RestorePolicy;->ACCEPT_IF_APK:Lcom/android/server/BackupManagerService$RestorePolicy;
 
-    .line 3287
+    .line 3286
     new-instance v0, Lcom/android/server/BackupManagerService$RestorePolicy;
 
     const-string v1, "MISMATCH_VERSION"
@@ -90,7 +90,7 @@
 
     sput-object v0, Lcom/android/server/BackupManagerService$RestorePolicy;->MISMATCH_VERSION:Lcom/android/server/BackupManagerService$RestorePolicy;
 
-    .line 3288
+    .line 3287
     new-instance v0, Lcom/android/server/BackupManagerService$RestorePolicy;
 
     const-string v1, "MISMATCH_SIGNATURE"
@@ -99,7 +99,7 @@
 
     sput-object v0, Lcom/android/server/BackupManagerService$RestorePolicy;->MISMATCH_SIGNATURE:Lcom/android/server/BackupManagerService$RestorePolicy;
 
-    .line 3289
+    .line 3288
     new-instance v0, Lcom/android/server/BackupManagerService$RestorePolicy;
 
     const-string v1, "NOT_ALLOWED"
@@ -110,7 +110,7 @@
 
     sput-object v0, Lcom/android/server/BackupManagerService$RestorePolicy;->NOT_ALLOWED:Lcom/android/server/BackupManagerService$RestorePolicy;
 
-    .line 3283
+    .line 3282
     const/4 v0, 0x6
 
     new-array v0, v0, [Lcom/android/server/BackupManagerService$RestorePolicy;
@@ -155,7 +155,7 @@
     .end annotation
 
     .prologue
-    .line 3283
+    .line 3282
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -166,7 +166,7 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 3283
+    .line 3282
     const-class v0, Lcom/android/server/BackupManagerService$RestorePolicy;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -182,7 +182,7 @@
     .locals 1
 
     .prologue
-    .line 3283
+    .line 3282
     sget-object v0, Lcom/android/server/BackupManagerService$RestorePolicy;->$VALUES:[Lcom/android/server/BackupManagerService$RestorePolicy;
 
     invoke-virtual {v0}, [Lcom/android/server/BackupManagerService$RestorePolicy;->clone()Ljava/lang/Object;

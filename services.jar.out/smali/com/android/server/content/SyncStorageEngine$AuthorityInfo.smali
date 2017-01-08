@@ -60,50 +60,50 @@
 
     const-wide/16 v1, -0x1
 
-    .line 254
+    .line 253
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 255
+    .line 254
     iput-object p1, p0, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->account:Landroid/accounts/Account;
 
-    .line 256
+    .line 255
     iput p2, p0, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->userId:I
 
-    .line 257
+    .line 256
     iput-object p3, p0, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->authority:Ljava/lang/String;
 
-    .line 258
+    .line 257
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->service:Landroid/content/ComponentName;
 
-    .line 259
+    .line 258
     iput p4, p0, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->ident:I
 
-    .line 260
+    .line 259
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->enabled:Z
 
-    .line 261
+    .line 260
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->syncable:I
 
-    .line 262
+    .line 261
     iput-wide v1, p0, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->backoffTime:J
 
-    .line 263
+    .line 262
     iput-wide v1, p0, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->backoffDelay:J
 
-    .line 264
+    .line 263
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->periodicSyncs:Ljava/util/ArrayList;
 
-    .line 266
+    .line 265
     iget-object v8, p0, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->periodicSyncs:Ljava/util/ArrayList;
 
     new-instance v0, Landroid/content/PeriodicSync;
@@ -124,7 +124,7 @@
 
     invoke-virtual {v8, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 270
+    .line 269
     return-void
 .end method
 
@@ -141,48 +141,48 @@
 
     const/4 v0, 0x0
 
-    .line 279
+    .line 278
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 280
+    .line 279
     iput-object v0, p0, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->account:Landroid/accounts/Account;
 
-    .line 281
+    .line 280
     iput p2, p0, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->userId:I
 
-    .line 282
+    .line 281
     iput-object v0, p0, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->authority:Ljava/lang/String;
 
-    .line 283
+    .line 282
     iput-object p1, p0, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->service:Landroid/content/ComponentName;
 
-    .line 284
+    .line 283
     iput p3, p0, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->ident:I
 
-    .line 286
+    .line 285
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->enabled:Z
 
-    .line 287
+    .line 286
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->syncable:I
 
-    .line 288
+    .line 287
     iput-wide v1, p0, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->backoffTime:J
 
-    .line 289
+    .line 288
     iput-wide v1, p0, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->backoffDelay:J
 
-    .line 290
+    .line 289
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->periodicSyncs:Ljava/util/ArrayList;
 
-    .line 291
+    .line 290
     iget-object v8, p0, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->periodicSyncs:Ljava/util/ArrayList;
 
     new-instance v0, Landroid/content/PeriodicSync;
@@ -203,7 +203,7 @@
 
     invoke-virtual {v8, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 295
+    .line 294
     return-void
 .end method
 
@@ -212,67 +212,67 @@
     .param p1, "toCopy"    # Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;
 
     .prologue
-    .line 227
+    .line 226
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 228
+    .line 227
     iget-object v2, p1, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->account:Landroid/accounts/Account;
 
     iput-object v2, p0, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->account:Landroid/accounts/Account;
 
-    .line 229
+    .line 228
     iget v2, p1, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->userId:I
 
     iput v2, p0, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->userId:I
 
-    .line 230
+    .line 229
     iget-object v2, p1, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->authority:Ljava/lang/String;
 
     iput-object v2, p0, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->authority:Ljava/lang/String;
 
-    .line 231
+    .line 230
     iget-object v2, p1, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->service:Landroid/content/ComponentName;
 
     iput-object v2, p0, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->service:Landroid/content/ComponentName;
 
-    .line 232
+    .line 231
     iget v2, p1, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->ident:I
 
     iput v2, p0, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->ident:I
 
-    .line 233
+    .line 232
     iget-boolean v2, p1, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->enabled:Z
 
     iput-boolean v2, p0, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->enabled:Z
 
-    .line 234
+    .line 233
     iget v2, p1, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->syncable:I
 
     iput v2, p0, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->syncable:I
 
-    .line 235
+    .line 234
     iget-wide v2, p1, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->backoffTime:J
 
     iput-wide v2, p0, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->backoffTime:J
 
-    .line 236
+    .line 235
     iget-wide v2, p1, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->backoffDelay:J
 
     iput-wide v2, p0, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->backoffDelay:J
 
-    .line 237
+    .line 236
     iget-wide v2, p1, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->delayUntil:J
 
     iput-wide v2, p0, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->delayUntil:J
 
-    .line 238
+    .line 237
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v2, p0, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->periodicSyncs:Ljava/util/ArrayList;
 
-    .line 239
+    .line 238
     iget-object v2, p1, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->periodicSyncs:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -293,7 +293,7 @@
 
     check-cast v1, Landroid/content/PeriodicSync;
 
-    .line 241
+    .line 240
     .local v1, "sync":Landroid/content/PeriodicSync;
     iget-object v2, p0, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->periodicSyncs:Ljava/util/ArrayList;
 
@@ -305,7 +305,7 @@
 
     goto :goto_0
 
-    .line 243
+    .line 242
     .end local v1    # "sync":Landroid/content/PeriodicSync;
     :cond_0
     return-void

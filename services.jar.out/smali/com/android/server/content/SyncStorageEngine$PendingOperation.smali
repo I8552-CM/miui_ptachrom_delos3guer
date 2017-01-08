@@ -48,25 +48,25 @@
     .param p7, "expedited"    # Z
 
     .prologue
-    .line 173
+    .line 172
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 174
+    .line 173
     iput-object p1, p0, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->account:Landroid/accounts/Account;
 
-    .line 175
+    .line 174
     iput p2, p0, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->userId:I
 
-    .line 176
+    .line 175
     iput p4, p0, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->syncSource:I
 
-    .line 177
+    .line 176
     iput p3, p0, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->reason:I
 
-    .line 178
+    .line 177
     iput-object p5, p0, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->authority:Ljava/lang/String;
 
-    .line 179
+    .line 178
     if-eqz p6, :cond_0
 
     new-instance v0, Landroid/os/Bundle;
@@ -79,20 +79,20 @@
     :cond_0
     iput-object p6, p0, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->extras:Landroid/os/Bundle;
 
-    .line 180
+    .line 179
     iput-boolean p7, p0, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->expedited:Z
 
-    .line 181
+    .line 180
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->authorityId:I
 
-    .line 182
+    .line 181
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->serviceName:Landroid/content/ComponentName;
 
-    .line 183
+    .line 182
     return-void
 .end method
 
@@ -101,54 +101,54 @@
     .param p1, "other"    # Lcom/android/server/content/SyncStorageEngine$PendingOperation;
 
     .prologue
-    .line 185
+    .line 184
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 186
+    .line 185
     iget-object v0, p1, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->account:Landroid/accounts/Account;
 
     iput-object v0, p0, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->account:Landroid/accounts/Account;
 
-    .line 187
+    .line 186
     iget v0, p1, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->userId:I
 
     iput v0, p0, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->userId:I
 
-    .line 188
+    .line 187
     iget v0, p1, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->reason:I
 
     iput v0, p0, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->reason:I
 
-    .line 189
+    .line 188
     iget v0, p1, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->syncSource:I
 
     iput v0, p0, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->syncSource:I
 
-    .line 190
+    .line 189
     iget-object v0, p1, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->authority:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->authority:Ljava/lang/String;
 
-    .line 191
+    .line 190
     iget-object v0, p1, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->extras:Landroid/os/Bundle;
 
     iput-object v0, p0, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->extras:Landroid/os/Bundle;
 
-    .line 192
+    .line 191
     iget v0, p1, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->authorityId:I
 
     iput v0, p0, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->authorityId:I
 
-    .line 193
+    .line 192
     iget-boolean v0, p1, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->expedited:Z
 
     iput-boolean v0, p0, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->expedited:Z
 
-    .line 194
+    .line 193
     iget-object v0, p1, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->serviceName:Landroid/content/ComponentName;
 
     iput-object v0, p0, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->serviceName:Landroid/content/ComponentName;
 
-    .line 195
+    .line 194
     return-void
 .end method

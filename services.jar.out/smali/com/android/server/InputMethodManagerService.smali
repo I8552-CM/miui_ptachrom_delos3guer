@@ -12082,7 +12082,7 @@
 
     if-eqz v6, :cond_4
 
-    invoke-interface {v6}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    invoke-virtual {v6}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v5
 

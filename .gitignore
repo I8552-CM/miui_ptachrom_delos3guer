@@ -1,3 +1,5 @@
 cm-11-20161231-UNOFFICIAL-delos3geur
 *.zip
 temp
+*~
+out/

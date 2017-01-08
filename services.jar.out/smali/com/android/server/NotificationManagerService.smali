@@ -4913,7 +4913,7 @@
 .end method
 
 .method private updateLightsLocked()V
-    .locals 10
+    .locals 8
 
     .prologue
     .line 2505
@@ -4989,10 +4989,24 @@
     .line 2532
     .local v0, "enableLed":Z
     :goto_1
-    if-nez v0, :cond_9
+    if-nez v5, :cond_1
 
     .line 2533
     iget-object v8, p0, Lcom/android/server/NotificationManagerService;->mNotificationLight:Lcom/android/server/LightsService$Light;
+
+    iget-object v5, p0, Lcom/android/server/NotificationManagerService;->mContext:Landroid/content/Context;
+ 
+    iget-object v6, p0, Lcom/android/server/NotificationManagerService;->mLedNotification:Lcom/android/server/NotificationManagerService$NotificationRecord;
+ 
+    iget-object v6, v6, Lcom/android/server/NotificationManagerService$NotificationRecord;->sbn:Landroid/service/notification/StatusBarNotification;
+ 
+    const-string v7, "_led"
+ 
+    invoke-static {v5, v6, v7}, Lmiui/util/NotificationFilterHelper;->isAllowed(Landroid/content/Context;Landroid/service/notification/StatusBarNotification;Ljava/lang/String;)Z
+ 
+    move-result v5
+ 
+    if-nez v5, :cond_3
 
     invoke-virtual {v8}, Lcom/android/server/LightsService$Light;->turnOff()V
 

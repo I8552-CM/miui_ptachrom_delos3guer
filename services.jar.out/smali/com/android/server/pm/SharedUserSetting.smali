@@ -142,7 +142,6 @@
 
     or-int/2addr v0, v3
 
-    .line 55
     goto :goto_0
 
     .line 56
