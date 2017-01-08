@@ -6,7 +6,7 @@
 local-zip-file     := cm-11-20161231-UNOFFICIAL-delos3geur.zip
 
 # The output zip file of MIUI rom, the default is porting_miui.zip if not specified
-local-out-zip-file := delos3geur.zip
+local-out-zip-file := MIUI7_delos3geur.zip
 
 # All apps from original ZIP, but has smali files chanded
 local-modified-apps :=
