@@ -8,28 +8,11 @@ local-zip-file     := cm-11-20161231-UNOFFICIAL-delos3geur.zip
 # The output zip file of MIUI rom, the default is porting_miui.zip if not specified
 local-out-zip-file := MIUI7_delos3geur.zip
 
-# All apps from original ZIP, but has smali files chanded
-local-modified-apps :=
-
-local-modified-priv-apps := 
-
-local-modified-jars := 
-
-# All apks from MIUI
-local-miui-removed-apps := 
-
-local-miui-removed-priv-apps := 
-
-local-miui-modified-apps := 
-
-# All apps need to be removed from original ZIP file
-local-remove-apps   := Gallery2 Exchange2
-
 # Config density for co-developers to use the aaps with HDPI or XHDPI resource,
 # Default configrations are HDPI for ics branch and XHDPI for jellybean branch
 local-density := XHDPI
 
-PORT_PRODUCT := taoshan
+PORT_PRODUCT := delos3geur
 
 # To include the local targets before and after zip the final ZIP file, 
 # and the local-targets should:
@@ -44,29 +27,3 @@ PORT_PRODUCT := taoshan
 #include phoneapps.mk
 
 include $(PORT_BUILD)/porting.mk
-
-local-pre-zip-misc:
-	@echo Update boot.img
-	cp other/boot.img $(ZIP_DIR)/boot.img
-	
-	@echo Update build.prop
-	cp other/build.prop $(ZIP_DIR)/system/build.prop
-
-	@echo Delete some unneeded files
-	rm -rf $(ZIP_DIR)/system/etc/.has_su_daemon
-
-	rm -rf $(ZIP_DIR)/system/priv-app/Dialer.apk
-
-	rm -rf $(ZIP_DIR)/system/priv-app/Keyguard.apk
-
-	rm -rf $(ZIP_DIR)/system/priv-app/SystemUI.apk
-
-	rm -rf $(ZIP_DIR)/system/priv-app/VoiceDialer.apk
-
-	rm -rf $(ZIP_DIR)/system/priv-app/Launcher3.apk
-
-	rm -rf $(ZIP_DIR)/system/priv-app/ParanoidOTA.apk
-
-	rm -rf $(ZIP_DIR)/system/priv-app/ThemeChooser.apk
-
-	rm -rf $(ZIP_DIR)/system/priv-app/ThemesProvider.apk
